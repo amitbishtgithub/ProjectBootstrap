@@ -76,7 +76,7 @@
             </p>
             <div class="text-center w-100 text-md-end">
               <button
-                class="text-capitalize btn btn-primary px-5 py-2"
+                class="text-capitalize btn btn-primary contactButton px-5 py-2"
                 data-bs-toggle="tooltip"
                 data-bs-title="Get in Touch"
               >
@@ -248,7 +248,7 @@
             </p>
 
             <button
-              class="text-capitalize btn btn-primary contact-us-btn px-5 py-2"
+              class="text-capitalize btn btn-primary contact-us-btn contactButton px-5 py-2"
               data-bs-toggle="tooltip"
               data-bs-title="Get in Touch"
             >
@@ -844,7 +844,9 @@
               ></textarea>
             </div>
 
-            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary">
+              Submit
+            </button>
           </form>
         </div>
       </div>
@@ -871,7 +873,7 @@
                     class="img-fluid"
                   />
                 </div>
-                <p class="text-white">(+00) 1234 5678</p>
+                <p class="text-white">(+91) 87654987212</p>
               </div>
             </div>
 
@@ -889,7 +891,7 @@
                     class="img-fluid"
                   />
                 </div>
-                <p class="text-white">(+00) 1234 5678</p>
+                <p class="text-white">email@gmail.com</p>
               </div>
             </div>
 
@@ -906,7 +908,13 @@
                     class="img-fluid"
                   />
                 </div>
-                <p class="text-white">(+00) 1234 5678</p>
+                <p class="text-white">
+                  <a
+                    href="https://www.google.com/maps/place/30%C2%B055'36.0%22N+79%C2%B004'51.0%22E/@30.9266713,79.0782584,17z/data=!3m1!4b1!4m4!3m3!8m2!3d30.9266667!4d79.0808333?entry=ttu&g_ep=EgoyMDI0MDkxNi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    >Locate</a
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -985,8 +993,8 @@
 
           <div class="row">
             <div class="col-lg-8 col-12">
-              Copyright ©2024 All rights reserved. | This template is made with
-              by <span class="bg-theme"> Amit Bisht</span>
+              Copyright ©2024 All rights reserved. | This template is made by
+              <span class="bg-theme"> Amit Bisht</span>
             </div>
             <div class="col-md-4 col-12">
               <div
@@ -1034,6 +1042,17 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
+    </script>
+    <script>
+      const contactButtons = document.querySelectorAll(`.contactButton`);
+
+      contactButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          document
+            .getElementById("contact-section")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
     </script>
   </body>
 </html>
