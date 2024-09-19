@@ -787,7 +787,7 @@
       </div>
       <div class="container">
         <div class="form-section mx-auto">
-          <form>
+          <form action="https://formspree.io/f/mzzplbyy" method="POST">
             <div class="mb-3">
               <div class="row">
                 <div class="col-lg-6 col-12">
@@ -796,6 +796,7 @@
                   >
                   <input
                     type="text"
+                    name="firstName"
                     class="form-control"
                     id="exampleFormUserFirstName"
                     placeholder="First Name"
@@ -808,6 +809,7 @@
                   >
                   <input
                     type="text"
+                    name="lastName"
                     class="form-control"
                     id="exampleFormUserLastName"
                     placeholder="Last Name"
@@ -821,6 +823,7 @@
               >
               <input
                 type="email"
+                name="email"
                 class="form-control"
                 id="exampleFormControlInput1"
                 placeholder="name@example.com"
@@ -833,12 +836,15 @@
               >
               <textarea
                 class="form-control"
+                name="message"
                 id="exampleFormControlTextarea1"
                 rows="3"
+                required
+                minlength="4"
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
